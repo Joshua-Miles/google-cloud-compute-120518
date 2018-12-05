@@ -26,6 +26,11 @@ io.on('connection', function(socket){
 
 app.use(express.static('public'))
 
+app.post('/deploy', function(){
+    const exec = require('child-process-promise').exec
+    exec('git pull origin master')
+})
+
 app.get('/', function(request, response){
     response.send(`
         <html>
