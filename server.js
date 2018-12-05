@@ -27,7 +27,7 @@ io.on('connection', function(socket){
 app.use(express.static('public'))
 
 app.use('/deploy', function(req, res){
-    console.log('DEPLOYING!!!')
+    console.log('~DEPLOYING~')
     const exec = require('child-process-promise').exec
     exec('git pull origin automated-deployment')
     res.send(200)
