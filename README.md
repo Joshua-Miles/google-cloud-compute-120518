@@ -1,13 +1,5 @@
 # Deploy on Google's Cloud Compute Engine
 
-## Vocabulary
-
-* Google Cloud Compute
-* Instance
-* CPU
-* Project metadata
-* SSH
-
 ## Outline
 
 * Map:
@@ -18,11 +10,6 @@
   4. Install our application on the instance
   5. Start our application
 
-* Bonus:
-
-  1. Use Instance Metadata to connect to your Google Cloud Compute Instance from your local machine
-
-  2. Forward a domain to your instance 
 
 ##Overview
 
@@ -37,8 +24,11 @@
 
   - Create a project
   - Compute Engine -> VM Instances -> Create Instance
-  - Review options (select Ubuntu 18.1)
-    - 744 hours free === 1 month
+  - Review options 
+    - select a micro instance
+    - select Ubuntu 18.1
+      - 744 hours free === 1 month
+    - Turn on HTTP and HTTPS access
 
 * Install Node.js on the instance
 
@@ -52,10 +42,8 @@
 * Install our application on the instance
 
   * Copy the github link
-  * Edit environment settings using vim
+    * `https://github.com/Joshua-Miles/google-cloud-compute-120518.git`
+  * Clone it 
+  * Install dependencies with npm
 
 * Start our application
-
-* Bonus:
-
-  1. Forward a domain to your instance
