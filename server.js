@@ -26,9 +26,9 @@ io.on('connection', function(socket){
 
 app.use(express.static('public'))
 
-app.post('/deploy', function(){
+app.get('/deploy', function(){
     const exec = require('child-process-promise').exec
-    exec('git pull origin master')
+    exec('git pull origin automated-deployment')
 })
 
 app.get('/', function(request, response){
@@ -41,4 +41,4 @@ app.get('/', function(request, response){
     `)
 })
 
-server.listen(3000)
+server.listen(80)
