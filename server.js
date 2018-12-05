@@ -29,6 +29,8 @@ app.use(express.static('public'))
 app.get('/deploy', function(){
     const exec = require('child-process-promise').exec
     exec('git pull origin automated-deployment')
+        .then(console.log)
+        .catch(console.log)
 })
 
 app.get('/', function(request, response){
