@@ -30,8 +30,6 @@ app.use('/deploy', function(req, res){
     console.log('DEPLOYING!!!')
     const exec = require('child-process-promise').exec
     exec('git pull origin automated-deployment')
-        .then(console.log)
-        .catch(console.log)
     res.send(200)
 })
 
