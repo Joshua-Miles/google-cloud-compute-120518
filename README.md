@@ -23,8 +23,17 @@
 * Create a Google Cloud Compute Instance
 
   - Create a project
+
   - Compute Engine -> VM Instances -> Create Instance
+
+    - Machine Type: Micro Instance
+
+    - Boot Disk: Ubuntu 18.1
+    - Allow HTTP traffic
+    - Allow HTTPS traffic
+
   - Review options 
+
     - select a micro instance
     - select Ubuntu 18.1
       - 744 hours free === 1 month
@@ -50,8 +59,9 @@
 
 
 
-## Bonus
+## Automated Deployment
 
 * Install nodemon
 * Install child-process-promise
 * Add a handler for the `/deploy` endpoint which uses the child-process-promise.exec function to pull updates to the google 
+* Add `http://<your IP>/deploy` as a GitHub web hook for the repository you want to autodeploy from. 
