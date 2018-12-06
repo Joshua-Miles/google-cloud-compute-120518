@@ -5,7 +5,7 @@ var io = require('socket.io')(server);
 
 let allCharacters = [];
 io.on('connection', function(socket){
-
+    console.log('New User Connected')
     socket.on('join', function(state, respond){
         let character = {
             name: state.name,
@@ -22,6 +22,14 @@ io.on('connection', function(socket){
         })
     })
 
+})
+
+app.use('/deploy', function(request,response){
+    const exec = require('child-process-promise').exec
+    exec('git pull origin master')
+        .then(console.log)
+        .catch(console.log)
+    response.send(200)
 })
 
 app.use(express.static('public'))

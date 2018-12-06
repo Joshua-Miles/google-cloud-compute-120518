@@ -47,3 +47,11 @@
   * Install dependencies with npm
 
 * Start our application
+
+
+
+## Bonus
+
+* Install nodemon
+* Install child-process-promise
+* Add a handler for the `/deploy` endpoint which uses the child-process-promise.exec function to pull updates to the google 
