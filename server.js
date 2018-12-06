@@ -2,7 +2,9 @@ var express = require('express');
 var app = express()
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
-
+console.log(`
+======================BOOTING!========================
+`)
 let allCharacters = [];
 io.on('connection', function(socket){
     console.log('New User Connected')
