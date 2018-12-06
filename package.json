@@ -18,7 +18,9 @@
   },
   "homepage": "https://github.com/Joshua-Miles/google-cloud-compute-120518#readme",
   "dependencies": {
+    "child-process-promise": "^2.2.1",
     "express": "^4.16.4",
+    "nodemon": "^1.18.7",
     "socket.io": "^2.2.0"
   }
 }
